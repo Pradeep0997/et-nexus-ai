@@ -24,12 +24,12 @@
 [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
 [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
 [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
-[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-[error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-[error] 	at java.base/java.lang.Thread.run(Thread.java:840)
+[error] 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+[error] 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+[error] 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+[error] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+[error] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+[error] 	at java.lang.Thread.run(Thread.java:750)
 [error] (scalaInstance) Expected `root / scalaVersion` to be 2.13.13 or later, but found 2.13.12.
 [error] To support backwards-only binary compatibility (SIP-51), the Scala 2.13 compiler
 [error] should not be older than scala-library on the dependency classpath.
