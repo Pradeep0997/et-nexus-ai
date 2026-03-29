@@ -1,0 +1,19 @@
+# SBT / Scala
+target/
+.bsp/
+.metals/
+.idea/
+*.class
+
+# sbt-specific
+project/project/
+project/target/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db

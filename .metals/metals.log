@@ -147,3 +147,13 @@ WARNING: Unmatched cancel notification for request id 2
 2026.03.29 11:07:55 INFO  Processing buildTarget/compile
 2026.03.29 11:07:59 INFO  Processing buildTarget/jvmRunEnvironment
 2026.03.29 11:08:19 INFO  Processing buildTarget/compile
+2026.03.29 11:09:19 INFO  Processing buildTarget/compile
+2026.03.29 11:10:19 INFO  Processing buildTarget/compile
+2026.03.29 11:11:19 INFO  Processing buildTarget/compile
+2026.03.29 11:11:19 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/metals.sbt. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:12:19 INFO  Processing buildTarget/compile
+2026.03.29 11:13:19 INFO  Processing buildTarget/compile
+2026.03.29 11:14:19 INFO  Processing buildTarget/compile
+2026.03.29 11:15:19 INFO  Processing buildTarget/compile
+2026.03.29 11:16:19 INFO  Processing buildTarget/compile
+2026.03.29 11:17:19 INFO  Processing buildTarget/compile
