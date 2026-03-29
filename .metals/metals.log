@@ -157,3 +157,69 @@ WARNING: Unmatched cancel notification for request id 2
 2026.03.29 11:15:19 INFO  Processing buildTarget/compile
 2026.03.29 11:16:19 INFO  Processing buildTarget/compile
 2026.03.29 11:17:19 INFO  Processing buildTarget/compile
+2026.03.29 11:26:17 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:26:17 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:26:17 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala
+2026.03.29 11:26:17 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.10.7/scalafmt-core_2.13-3.10.7.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.10.7/scalafmt-core_2.13-3.10.7.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.10.7/scalafmt-config_2.13-3.10.7.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-macros_2.13/3.10.7/scalafmt-macros_2.13-3.10.7.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.10.7/scalafmt-config_2.13-3.10.7.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-macros_2.13/3.10.7/scalafmt-macros_2.13-3.10.7.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.15.0/scalameta_2.13-4.15.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.15.0/scalameta_2.13-4.15.0.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.15.0/parsers_2.13-4.15.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.15.0/parsers_2.13-4.15.0.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.15.0/trees_2.13-4.15.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.15.0/trees_2.13-4.15.0.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/io_2.13/4.15.0/io_2.13-4.15.0.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.15.0/common_2.13-4.15.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/io_2.13/4.15.0/io_2.13-4.15.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.15.0/common_2.13-4.15.0.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.15.0/trees_2.13-4.15.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/io_2.13/4.15.0/io_2.13-4.15.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-macros_2.13/3.10.7/scalafmt-macros_2.13-3.10.7.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.15.0/parsers_2.13-4.15.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.15.0/common_2.13-4.15.0.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.10.7/scalafmt-config_2.13-3.10.7.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-macros_2.13/3.10.7/scalafmt-macros_2.13-3.10.7.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.15.0/scalameta_2.13-4.15.0.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.10.7/scalafmt-config_2.13-3.10.7.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.10.7/scalafmt-core_2.13-3.10.7.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/io_2.13/4.15.0/io_2.13-4.15.0.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.15.0/scalameta_2.13-4.15.0.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.15.0/parsers_2.13-4.15.0.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.15.0/common_2.13-4.15.0.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.10.7/scalafmt-core_2.13-3.10.7.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.15.0/trees_2.13-4.15.0.jar
+2026.03.29 11:26:37 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:26:37 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:26:37 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:26:37 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala
+2026.03.29 11:26:37 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:26:37 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala
+2026.03.29 11:26:37 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:26:37 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:26:37 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:26:37 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:26:37 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala
+2026.03.29 11:26:38 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:26:58 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:26:58 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala
+2026.03.29 11:26:58 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:26:58 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:26:59 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:27:00 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:27:00 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:27:21 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:27:21 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:27:21 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala
+2026.03.29 11:27:21 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:27:21 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:27:21 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:27:21 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:27:21 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:27:22 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala
+2026.03.29 11:27:22 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:29:17 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
