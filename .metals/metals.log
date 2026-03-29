@@ -1,0 +1,149 @@
+2026.03.29 11:05:23 INFO  Started: Metals version 1.6.6 in folders '/home/pradeepreddy/et-nexus' for client Antigravity 1.107.0.
+2026.03.29 11:05:23 INFO  Memory monitor started
+2026.03.29 11:05:24 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.03.29 11:05:30 INFO  running '/home/pradeepreddy/.local/share/coursier/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall'
+2026.03.29 11:05:37 INFO  [info] Updated file /home/pradeepreddy/et-nexus/backend/project/build.properties: set sbt.version to 1.12.2
+2026.03.29 11:05:37 INFO  [info] welcome to sbt 1.12.2 (Eclipse Adoptium Java 17.0.18)
+2026.03.29 11:05:39 INFO  [info] loading global plugins from /home/pradeepreddy/.sbt/1.0/plugins
+2026.03.29 11:05:43 INFO  [info] loading settings for project backend-build-build-build from metals.sbt...
+2026.03.29 11:05:43 INFO  [info] loading project definition from /home/pradeepreddy/et-nexus/backend/project/project/project
+2026.03.29 11:05:46 INFO  [info] loading settings for project backend-build-build from metals.sbt...
+2026.03.29 11:05:46 INFO  [info] loading project definition from /home/pradeepreddy/et-nexus/backend/project/project
+2026.03.29 11:05:53 INFO  [success] Generated .bloop/backend-build-build.json
+2026.03.29 11:05:53 INFO  [success] Total time: 8 s, completed Mar 29, 2026, 11:05:53 AM
+2026.03.29 11:05:53 INFO  [info] loading settings for project backend-build from metals.sbt, plugins.sbt...
+2026.03.29 11:05:53 INFO  [info] loading project definition from /home/pradeepreddy/et-nexus/backend/project
+2026.03.29 11:05:57 INFO  [success] Generated .bloop/backend-build.json
+2026.03.29 11:05:57 INFO  [success] Total time: 3 s, completed Mar 29, 2026, 11:05:57 AM
+2026.03.29 11:05:59 INFO  [info] loading settings for project root from build.sbt...
+2026.03.29 11:05:59 INFO  [info] set current project to et-nexus-backend (in build file:/home/pradeepreddy/et-nexus/backend/)
+2026.03.29 11:05:59 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/project/plugins.sbt
+2026.03.29 11:05:59 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/plugins.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:06:26 INFO  [error] Couldn't run bloopGenerate. The issue could be caused by failing to compile the project.
+2026.03.29 11:06:26 INFO  [error] java.lang.RuntimeException: Expected `root / scalaVersion` to be 2.13.13 or later, but found 2.13.12.
+2026.03.29 11:06:26 INFO  [error] To support backwards-only binary compatibility (SIP-51), the Scala 2.13 compiler
+2026.03.29 11:06:26 INFO  [error] should not be older than scala-library on the dependency classpath.
+2026.03.29 11:06:26 INFO  [error] 
+2026.03.29 11:06:26 INFO  [error] Upgrade the `scalaVersion` to fix the build. If upgrading the Scala compiler version is
+2026.03.29 11:06:26 INFO  [error] not possible (for example due to a regression in the compiler or a missing dependency),
+2026.03.29 11:06:26 INFO  [error] this error can be demoted by setting `allowUnsafeScalaLibUpgrade := true`.
+2026.03.29 11:06:26 INFO  [error] 
+2026.03.29 11:06:26 INFO  [error] See `root / evicted` to know why scala-library 2.13.13 is getting pulled in.
+2026.03.29 11:06:26 INFO  [error] 
+2026.03.29 11:06:26 INFO  [error] 	at scala.sys.package$.error(package.scala:30)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.internal.Compiler$.$anonfun$scalaInstanceFromUpdate$7(Compiler.scala:156)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.internal.Compiler$.$anonfun$scalaInstanceFromUpdate$7$adapted(Compiler.scala:130)
+2026.03.29 11:06:26 INFO  [error] 	at scala.collection.Iterator.foreach(Iterator.scala:943)
+2026.03.29 11:06:26 INFO  [error] 	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+2026.03.29 11:06:26 INFO  [error] 	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.internal.Compiler$.$anonfun$scalaInstanceFromUpdate$1(Compiler.scala:130)
+2026.03.29 11:06:26 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.Execute.work(Execute.scala:292)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+2026.03.29 11:06:26 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+2026.03.29 11:06:26 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2026.03.29 11:06:26 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2026.03.29 11:06:26 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2026.03.29 11:06:26 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2026.03.29 11:06:26 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2026.03.29 11:06:26 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:840)
+2026.03.29 11:06:26 INFO  [error] (scalaInstance) Expected `root / scalaVersion` to be 2.13.13 or later, but found 2.13.12.
+2026.03.29 11:06:26 INFO  [error] To support backwards-only binary compatibility (SIP-51), the Scala 2.13 compiler
+2026.03.29 11:06:26 INFO  [error] should not be older than scala-library on the dependency classpath.
+2026.03.29 11:06:26 INFO  [error] 
+2026.03.29 11:06:26 INFO  [error] Upgrade the `scalaVersion` to fix the build. If upgrading the Scala compiler version is
+2026.03.29 11:06:26 INFO  [error] not possible (for example due to a regression in the compiler or a missing dependency),
+2026.03.29 11:06:26 INFO  [error] this error can be demoted by setting `allowUnsafeScalaLibUpgrade := true`.
+2026.03.29 11:06:26 INFO  [error] 
+2026.03.29 11:06:26 INFO  [error] See `root / evicted` to know why scala-library 2.13.13 is getting pulled in.
+2026.03.29 11:06:26 INFO  [error] Total time: 27 s, completed Mar 29, 2026, 11:06:26 AM
+2026.03.29 11:06:26 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/plugins.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:06:26 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/plugins.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+Mar 29, 2026 11:06:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+Mar 29, 2026 11:06:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+Mar 29, 2026 11:06:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Mar 29, 2026 11:06:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.03.29 11:06:26 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/build.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:06:27 INFO  time: ran 'sbt bloopInstall' in 56s
+2026.03.29 11:06:27 ERROR sbt command failed: /home/pradeepreddy/.local/share/coursier/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall
+2026.03.29 11:06:27 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/project/plugins.sbt
+2026.03.29 11:06:27 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala
+2026.03.29 11:06:27 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/build.sbt
+2026.03.29 11:06:27 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/plugins.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:06:28 WARN  Could not find semantic tokens for: file:///home/pradeepreddy/et-nexus/backend/project/plugins.sbt
+2026.03.29 11:06:28 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:06:29 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/build.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:06:41 INFO  sbt 1.12.2 found for workspace.
+2026.03.29 11:06:43 INFO  [info] welcome to sbt 1.12.2 (Eclipse Adoptium Java 17.0.18)
+2026.03.29 11:06:44 INFO  [info] loading global plugins from /home/pradeepreddy/.sbt/1.0/plugins
+2026.03.29 11:06:46 INFO  [info] loading project definition from /home/pradeepreddy/et-nexus/backend/project/project/project
+2026.03.29 11:06:47 INFO  [info] loading project definition from /home/pradeepreddy/et-nexus/backend/project/project
+2026.03.29 11:06:49 INFO  [info] loading settings for project backend-build from plugins.sbt...
+2026.03.29 11:06:49 INFO  [info] loading project definition from /home/pradeepreddy/et-nexus/backend/project
+2026.03.29 11:06:52 INFO  [info] loading settings for project root from build.sbt...
+2026.03.29 11:06:52 INFO  [info] set current project to et-nexus-backend (in build file:/home/pradeepreddy/et-nexus/backend/)
+2026.03.29 11:06:52 INFO  [success] Total time: 0 s, completed Mar 29, 2026, 11:06:52 AM
+2026.03.29 11:06:53 INFO  time: ran 'sbt bspConfig' in 11s
+2026.03.29 11:06:53 INFO  Attempting to connect to the build server...
+2026.03.29 11:06:53 INFO  Running BSP server List(/home/pradeepreddy/.cache/coursier/arc/https/github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.18%252B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.18_8.tar.gz/jdk-17.0.18+8/bin/java, -Xms100m, -Xmx100m, -classpath, /home/pradeepreddy/.cache/coursier/arc/https/github.com/sbt/sbt/releases/download/v1.12.2/sbt-1.12.2.zip/sbt/bin/sbt-launch.jar, -Dsbt.script=/home/pradeepreddy/.cache/coursier/arc/https/github.com/sbt/sbt/releases/download/v1.12.2/sbt-1.12.2.zip/sbt/bin/sbt, xsbt.boot.Boot, -bsp)
+2026.03.29 11:06:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/pradeepreddy/et-nexus/.metals/bsp.trace.json or /home/pradeepreddy/.cache/metals/bsp.trace.json
+2026.03.29 11:06:53 INFO  BSP server: [info] server was not detected. starting an instance
+2026.03.29 11:06:55 INFO  BSP server: [info] welcome to sbt 1.12.2 (Eclipse Adoptium Java 17.0.18)
+2026.03.29 11:06:56 INFO  BSP server: [info] loading global plugins from /home/pradeepreddy/.sbt/1.0/plugins
+2026.03.29 11:06:58 INFO  BSP server: [info] loading project definition from /home/pradeepreddy/et-nexus/backend/project/project/project
+2026.03.29 11:07:00 INFO  BSP server: [info] loading settings for project backend-build-build from metals.sbt...
+2026.03.29 11:07:00 INFO  BSP server: [info] loading project definition from /home/pradeepreddy/et-nexus/backend/project/project
+2026.03.29 11:07:01 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:07:03 INFO  BSP server: [info] loading settings for project backend-build from metals.sbt, plugins.sbt...
+2026.03.29 11:07:03 INFO  BSP server: [info] loading project definition from /home/pradeepreddy/et-nexus/backend/project
+2026.03.29 11:07:10 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:07:10 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/project/metals.sbt
+2026.03.29 11:07:10 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:07:10 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:07:10 WARN  Could not find semantic tokens for: file:///home/pradeepreddy/et-nexus/backend/project/metals.sbt
+2026.03.29 11:07:11 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:07:11 WARN  Could not find semantic tokens for: file:///home/pradeepreddy/et-nexus/backend/project/metals.sbt
+2026.03.29 11:07:13 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/project/plugins.sbt
+2026.03.29 11:07:13 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/plugins.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:07:13 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/plugins.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:07:13 WARN  Could not find semantic tokens for: file:///home/pradeepreddy/et-nexus/backend/project/plugins.sbt
+2026.03.29 11:07:18 INFO  BSP server: [info] loading settings for project root from build.sbt...
+2026.03.29 11:07:18 INFO  BSP server: [info] set current project to et-nexus-backend (in build file:/home/pradeepreddy/et-nexus/backend/)
+2026.03.29 11:07:18 INFO  BSP server: [info] sbt server started at local:///home/pradeepreddy/.sbt/1.0/server/616e3c75f0c81a53a557/sock
+2026.03.29 11:07:19 INFO  Processing workspace/reload
+2026.03.29 11:07:19 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/project/plugins.sbt. Using presentation compiler with project's scala-library version: 3.3.7
+2026.03.29 11:07:19 INFO  compiling global-plugins
+2026.03.29 11:07:19 WARN  Could not find semantic tokens for: file:///home/pradeepreddy/et-nexus/backend/project/plugins.sbt
+2026.03.29 11:07:19 INFO  compiling backend-build-build-build
+2026.03.29 11:07:19 INFO  compiling backend-build-build
+2026.03.29 11:07:19 INFO  compiling backend-build
+2026.03.29 11:07:20 INFO  time: Connected to build server in 27s
+2026.03.29 11:07:20 INFO  Connected to Build server: sbt v1.12.2
+2026.03.29 11:07:20 INFO  Processing workspace/buildTargets
+2026.03.29 11:07:28 INFO  Processing buildTarget/scalacOptions
+2026.03.29 11:07:28 INFO  Processing buildTarget/sources
+2026.03.29 11:07:28 INFO  Processing buildTarget/dependencySources
+2026.03.29 11:07:31 INFO  time: Imported build in 10s
+2026.03.29 11:07:42 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.03.29 11:07:48 INFO  Processing buildTarget/compile
+2026.03.29 11:07:52 INFO  time: code lens generation in 3.85s
+2026.03.29 11:07:52 INFO  Processing buildTarget/jvmRunEnvironment
+2026.03.29 11:07:55 INFO  time: indexed workspace in 24s
+2026.03.29 11:07:55 INFO  Processing buildTarget/scalaMainClasses
+2026.03.29 11:07:55 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:07:55 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:07:55 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/project/plugins.sbt
+2026.03.29 11:07:55 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/project/metals.sbt
+2026.03.29 11:07:55 INFO  Processing buildTarget/scalaTestClasses
+2026.03.29 11:07:55 INFO  Processing buildTarget/compile
+2026.03.29 11:07:59 INFO  Processing buildTarget/jvmRunEnvironment
+2026.03.29 11:08:19 INFO  Processing buildTarget/compile
