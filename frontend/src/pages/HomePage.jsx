@@ -55,7 +55,7 @@ export default function HomePage() {
                         className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full
                                  bg-royal-500/15 border border-royal-500/30 text-royal-300 text-sm">
                         <span className="w-2 h-2 rounded-full bg-royal-400 animate-pulse-slow" />
-                        Built for the 24-hour Hackathon · ET Nexus
+                        Built for the Hackathon · ET Nexus
                     </motion.div>
 
                     {/* Headline */}
