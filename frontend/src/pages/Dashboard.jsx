@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePersona } from '../context/PersonaContext';
 import InvestorView from '../components/persona/InvestorView';
 import FounderView from '../components/persona/FounderView';
 import StudentView from '../components/persona/StudentView';
@@ -37,8 +38,9 @@ const PERSONAS = {
 
 // ── Dashboard shell ───────────────────────────────────────────────────────────
 export default function Dashboard() {
-    const [activePersona, setActivePersona] = useState('INVESTOR');
-    const current = PERSONAS[activePersona];
+    // Shared with Navbar via PersonaContext — fixes the disconnected state bug
+    const { persona, setPersona } = usePersona();
+    const current = PERSONAS[persona];
     const { View } = current;
 
     return (
@@ -55,7 +57,7 @@ export default function Dashboard() {
                     <div className="relative">
                         <span className="text-4xl">{current.icon}</span>
                         <motion.span
-                            key={activePersona + '-dot'}
+                            key={persona + '-dot'}
                             className={`absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full ${current.dotColor}
                           border-2 border-void`}
                             initial={{ scale: 0 }}
@@ -69,7 +71,7 @@ export default function Dashboard() {
                         </h1>
                         <AnimatePresence mode="wait">
                             <motion.p
-                                key={activePersona + '-tag'}
+                                key={persona + '-tag'}
                                 initial={{ opacity: 0, x: -6 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: 6 }}
@@ -93,12 +95,12 @@ export default function Dashboard() {
                             whileTap={{ scale: 0.97 }}
                             className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm
                           font-semibold border transition-all duration-250
-                          ${activePersona === key
+                          ${persona === key
                                     ? p.activeClasses
                                     : 'border-transparent text-slate-500 hover:text-slate-300 hover:bg-white/5'
                                 }`}
                         >
-                            {activePersona === key && (
+                            {persona === key && (
                                 <motion.div
                                     layoutId="persona-pill"
                                     className="absolute inset-0 rounded-xl border border-current opacity-30"
@@ -114,7 +116,7 @@ export default function Dashboard() {
 
             {/* ── Persona view (animated swap) ──────────────────── */}
             <AnimatePresence mode="wait">
-                <View key={activePersona} />
+                <View key={persona} />
             </AnimatePresence>
         </section>
     );
