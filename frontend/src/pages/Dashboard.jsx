@@ -1,142 +1,121 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import InvestorView from '../components/persona/InvestorView';
+import FounderView from '../components/persona/FounderView';
+import StudentView from '../components/persona/StudentView';
 
-const PERSONA_META = {
+// ── Persona config ────────────────────────────────────────────────────────────
+const PERSONAS = {
     INVESTOR: {
         label: 'Investor',
         icon: '📈',
-        accent: 'royal',
         tagline: 'Portfolio signals, market moves & deal flow',
-        cards: [
-            { title: 'Nifty 50', value: '22,456.80', delta: '+1.2%', up: true },
-            { title: 'Sensex', value: '73,921.30', delta: '+0.9%', up: true },
-            { title: 'USD/INR', value: '83.47', delta: '-0.1%', up: false },
-            { title: 'Gold (10g)', value: '₹71,240', delta: '+0.4%', up: true },
-        ],
+        accent: 'royal',
+        activeClasses: 'border-royal-500/50 bg-royal-500/15 text-royal-300 shadow-neon-purple',
+        dotColor: 'bg-royal-400',
+        View: InvestorView,
     },
     FOUNDER: {
         label: 'Founder',
         icon: '🚀',
+        tagline: 'Funding rounds, competitor moves & ecosystem shifts',
         accent: 'neon',
-        tagline: 'Funding rounds, regulatory shifts & ecosystem plays',
-        cards: [
-            { title: 'Startup Deals (wk)', value: '₹2,340 Cr', delta: '+18%', up: true },
-            { title: 'UPI Txns (today)', value: '42.8 Cr', delta: '+3.2%', up: true },
-            { title: 'GST (live)', value: '₹1.87 L Cr', delta: '+11%', up: true },
-            { title: 'PLI Claims', value: '₹9,420 Cr', delta: '-4%', up: false },
-        ],
+        activeClasses: 'border-neon-500/50 bg-neon-500/15 text-neon-300 shadow-neon-pink',
+        dotColor: 'bg-neon-400',
+        View: FounderView,
     },
     STUDENT: {
         label: 'Student',
         icon: '🎓',
+        tagline: 'Plain-English explainers, exam angles & career signals',
         accent: 'cyber',
-        tagline: 'Concepts explained, exam angles & career signals',
-        cards: [
-            { title: 'Repo Rate', value: '6.50%', delta: 'RBI Nov\'24', up: null },
-            { title: 'CPI Inflation', value: '4.87%', delta: 'Feb 2025', up: null },
-            { title: 'GDP Growth', value: '8.4%', delta: 'FY24 Est.', up: null },
-            { title: 'Fiscal Deficit', value: '5.1% GDP', delta: 'FY25 Target', up: null },
-        ],
+        activeClasses: 'border-cyber-500/50 bg-cyber-500/15 text-cyber-300 shadow-neon-cyan',
+        dotColor: 'bg-cyber-400',
+        View: StudentView,
     },
 };
 
-const MOCK_FEED = [
-    { id: 1, category: 'Markets', headline: 'RBI holds rates; Governor flags sticky core inflation as key risk', time: '9 min ago', hot: true },
-    { id: 2, category: 'Startups', headline: 'Zepto raises $350M at $5B valuation in quick commerce land-grab', time: '24 min ago', hot: true },
-    { id: 3, category: 'Economy', headline: 'India\'s exports surge 12% YoY driven by electronics & pharma', time: '1 hr ago', hot: false },
-    { id: 4, category: 'Policy', headline: 'SEBI tightens F&O rules; new lot sizes effective June 2025', time: '2 hr ago', hot: false },
-    { id: 5, category: 'Global', headline: 'Fed signals one more rate cut in 2025 — rupee strengthens', time: '3 hr ago', hot: false },
-];
-
-const accentMap = {
-    royal: { pill: 'bg-royal-500/20 text-royal-300', delta: 'text-royal-400' },
-    neon: { pill: 'bg-neon-500/20  text-neon-300', delta: 'text-neon-400' },
-    cyber: { pill: 'bg-cyber-500/20 text-cyber-300', delta: 'text-cyber-400' },
-};
-
+// ── Dashboard shell ───────────────────────────────────────────────────────────
 export default function Dashboard() {
-    const [persona, setPersona] = useState('INVESTOR');
-    const meta = PERSONA_META[persona];
-    const accent = accentMap[meta.accent];
+    const [activePersona, setActivePersona] = useState('INVESTOR');
+    const current = PERSONAS[activePersona];
+    const { View } = current;
 
     return (
-        <section className="max-w-7xl mx-auto px-6 py-10 animate-fade-in">
-            {/* ── Header ───────────────────────────────────────── */}
+        <section className="max-w-7xl mx-auto px-6 py-10">
+
+            {/* ── Page header ──────────────────────────────────── */}
             <div className="mb-8">
-                <div className="flex items-center gap-3 mb-2">
-                    <span className="text-4xl">{meta.icon}</span>
-                    <h1 className="font-display text-3xl font-bold text-gradient-purple">
-                        My ET — {meta.label} View
-                    </h1>
-                </div>
-                <p className="text-slate-400 text-sm">{meta.tagline}</p>
-            </div>
-
-            {/* ── Persona Switcher ──────────────────────────────── */}
-            <div className="flex gap-2 mb-8">
-                {Object.keys(PERSONA_META).map((p) => (
-                    <button
-                        key={p}
-                        onClick={() => setPersona(p)}
-                        className={`px-4 py-2 rounded-xl text-sm font-semibold border transition-all duration-200
-              ${persona === p
-                                ? `${accent.pill} border-current scale-105 shadow-neon-purple`
-                                : 'text-slate-400 border-white/10 hover:border-white/25 hover:text-white'
-                            }`}
-                    >
-                        {PERSONA_META[p].icon} {PERSONA_META[p].label}
-                    </button>
-                ))}
-            </div>
-
-            {/* ── KPI Cards ─────────────────────────────────────── */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-                {meta.cards.map((card) => (
-                    <div key={card.title}
-                        className="card-glass p-5 hover:border-royal-500/30 transition-all duration-300
-                          hover:shadow-neon-purple animate-slide-up">
-                        <p className="text-xs text-slate-500 uppercase tracking-widest mb-2">{card.title}</p>
-                        <p className="font-display text-2xl font-bold text-white mb-1">{card.value}</p>
-                        <span className={`text-xs font-medium
-              ${card.up === true ? 'text-emerald-400' :
-                                card.up === false ? 'text-rose-400' : 'text-slate-400'}`}>
-                            {card.up === true ? '▲' : card.up === false ? '▼' : '—'} {card.delta}
-                        </span>
+                <motion.div
+                    className="flex items-center gap-3 mb-3"
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                >
+                    <div className="relative">
+                        <span className="text-4xl">{current.icon}</span>
+                        <motion.span
+                            key={activePersona + '-dot'}
+                            className={`absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full ${current.dotColor}
+                          border-2 border-void`}
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+                        />
                     </div>
-                ))}
-            </div>
+                    <div>
+                        <h1 className="font-display text-3xl font-bold text-gradient-purple leading-tight">
+                            My ET
+                        </h1>
+                        <AnimatePresence mode="wait">
+                            <motion.p
+                                key={activePersona + '-tag'}
+                                initial={{ opacity: 0, x: -6 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: 6 }}
+                                transition={{ duration: 0.25 }}
+                                className="text-slate-400 text-sm"
+                            >
+                                {current.tagline}
+                            </motion.p>
+                        </AnimatePresence>
+                    </div>
+                </motion.div>
 
-            {/* ── News Feed ─────────────────────────────────────── */}
-            <div>
-                <h2 className="text-lg font-semibold text-slate-200 mb-4 flex items-center gap-2">
-                    <span className={`w-2 h-2 rounded-full bg-neon-400 animate-pulse-slow`} />
-                    Live Feed
-                </h2>
-                <div className="flex flex-col gap-3">
-                    {MOCK_FEED.map((item) => (
-                        <article
-                            key={item.id}
-                            className="card-glass p-4 flex items-start gap-4 cursor-pointer
-                         hover:border-royal-500/40 hover:bg-white/[0.03] transition-all duration-200
-                         group"
+                {/* ── Persona toggle tabs ───────────────────────── */}
+                <div className="flex items-center gap-2 p-1 bg-white/[0.03] border border-white/10
+                        rounded-2xl w-fit">
+                    {Object.entries(PERSONAS).map(([key, p]) => (
+                        <motion.button
+                            key={key}
+                            onClick={() => setActivePersona(key)}
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.97 }}
+                            className={`relative flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm
+                          font-semibold border transition-all duration-250
+                          ${activePersona === key
+                                    ? p.activeClasses
+                                    : 'border-transparent text-slate-500 hover:text-slate-300 hover:bg-white/5'
+                                }`}
                         >
-                            <span className={`badge mt-0.5 ${accent.pill} shrink-0`}>
-                                {item.category}
-                            </span>
-                            <div className="flex-1 min-w-0">
-                                <p className="text-sm text-slate-200 group-hover:text-white transition-colors leading-snug">
-                                    {item.headline}
-                                    {item.hot && (
-                                        <span className="ml-2 text-xs bg-neon-500/20 text-neon-300 px-1.5 py-0.5 rounded-full">
-                                            🔥 Hot
-                                        </span>
-                                    )}
-                                </p>
-                            </div>
-                            <span className="text-xs text-slate-600 shrink-0 mt-0.5">{item.time}</span>
-                        </article>
+                            {activePersona === key && (
+                                <motion.div
+                                    layoutId="persona-pill"
+                                    className="absolute inset-0 rounded-xl border border-current opacity-30"
+                                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                                />
+                            )}
+                            <span className="text-base">{p.icon}</span>
+                            {p.label}
+                        </motion.button>
                     ))}
                 </div>
             </div>
+
+            {/* ── Persona view (animated swap) ──────────────────── */}
+            <AnimatePresence mode="wait">
+                <View key={activePersona} />
+            </AnimatePresence>
         </section>
     );
 }
