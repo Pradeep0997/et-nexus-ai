@@ -223,3 +223,27 @@ Downloaded https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.15.0/trees_
 2026.03.29 11:27:22 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala
 2026.03.29 11:27:22 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
 2026.03.29 11:29:17 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:30:21 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:30:40 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:32:19 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Routes.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:32:34 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:32:34 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:32:34 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala
+2026.03.29 11:32:35 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:32:35 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:32:35 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:32:35 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:32:36 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:32:46 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:33:46 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:33:46 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/RedisCache.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:34:14 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:34:14 WARN  sbt does not support `buildTarget/inverseSources`, unable to fetch targets owning source.
+2026.03.29 11:34:14 WARN  no build target for: /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala
+2026.03.29 11:34:14 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:34:14 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:34:14 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:34:30 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:34:30 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:34:59 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21
+2026.03.29 11:35:02 INFO  no build target found for /home/pradeepreddy/et-nexus/backend/src/main/scala/etnexus/Server.scala. Using presentation compiler with project's scala-library version: 2.12.21

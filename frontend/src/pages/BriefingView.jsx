@@ -1,15 +1,11 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import StoryArc from '../components/StoryArc';
+import VideoStudio from '../components/VideoStudio';
+import { useLanguage } from '../context/LanguageContext';
 
 // ── Config ────────────────────────────────────────────────────────────────────
 const API_BASE = 'http://localhost:8080';
-
-const TOPIC_PRESETS = [
-    { key: 'rbi-rate-decision', label: '🏦 RBI Rate Decision' },
-    { key: 'quick-commerce', label: '⚡ Quick Commerce' },
-    { key: 'india-economy', label: '📊 India Economy' },
-];
 
 // ── Chat message bubble ───────────────────────────────────────────────────────
 function ChatBubble({ msg, index }) {
@@ -66,11 +62,19 @@ function PlayerChip({ player }) {
 
 // ── Main component ────────────────────────────────────────────────────────────
 export default function BriefingView() {
+    const { t } = useLanguage();
     const [topic, setTopic] = useState('rbi-rate-decision');
     const [briefing, setBriefing] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [cached, setCached] = useState(false);
+    const [videoOpen, setVideoOpen] = useState(false);
+
+    const TOPIC_PRESETS = [
+        { key: 'rbi-rate-decision', label: t('topicRbi') },
+        { key: 'quick-commerce', label: t('topicQcomm') },
+        { key: 'india-economy', label: t('topicEconomy') },
+    ];
 
     const [messages, setMessages] = useState([
         { role: 'ai', text: '👋 Select a topic above and I\'ll synthesise the briefing. Then ask me anything!' },
@@ -126,13 +130,29 @@ export default function BriefingView() {
 
     return (
         <section className="max-w-7xl mx-auto px-6 py-10">
+            {/* ── Video Studio modal ────────────────────────────── */}
+            <VideoStudio open={videoOpen} onClose={() => setVideoOpen(false)} />
+
             {/* ── Page header + topic picker ────────────────────── */}
             <div className="mb-6">
-                <h1 className="font-display text-3xl font-bold text-gradient-cyber mb-1">
-                    📰 News Navigator
-                </h1>
+                <div className="flex items-start justify-between gap-4 mb-1">
+                    <h1 className="font-display text-3xl font-bold text-gradient-cyber">
+                        📰 {t('briefingTitle')}
+                    </h1>
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => setVideoOpen(true)}
+                        className="shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-xl
+                                   text-sm font-semibold text-white border border-neon-500/40
+                                   bg-neon-500/15 hover:bg-neon-500/25 hover:border-neon-500/60
+                                   shadow-neon-pink transition-all duration-200"
+                    >
+                        {t('generateVideo')}
+                    </motion.button>
+                </div>
                 <p className="text-slate-400 text-sm mb-4">
-                    AI-synthesised story arc · Interactive timeline · Follow-up chat
+                    {t('briefingTagline')}
                 </p>
 
                 <div className="flex flex-wrap items-center gap-2">
@@ -188,10 +208,21 @@ export default function BriefingView() {
                         ) : briefing ? (
                             <>
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">AI Summary</span>
+                                    <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">{t('summaryLabel')}</span>
                                     {error && <span className="badge bg-amber-500/15 text-amber-300 border-amber-500/30 text-[10px]">demo</span>}
                                 </div>
-                                <p className="text-sm text-slate-300 leading-relaxed">{briefing.summary}</p>
+                                <AnimatePresence mode="wait">
+                                    <motion.p
+                                        key={t('rbiSummary')}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.4 }}
+                                        className="text-sm text-slate-300 leading-relaxed"
+                                    >
+                                        {briefing.topic === 'rbi-rate-decision' ? t('rbiSummary') : briefing.summary}
+                                    </motion.p>
+                                </AnimatePresence>
                             </>
                         ) : null}
                     </div>
@@ -222,7 +253,7 @@ export default function BriefingView() {
                     {/* Key players */}
                     <div className="card-glass p-4 shrink-0">
                         <h2 className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-3">
-                            Key Players
+                            {t('keyPlayersLabel')}
                         </h2>
                         {loading ? (
                             <div className="space-y-2">
@@ -251,7 +282,7 @@ export default function BriefingView() {
                         {/* Header */}
                         <div className="px-4 py-3 border-b border-white/10 flex items-center gap-2 shrink-0">
                             <span className="w-2 h-2 rounded-full bg-cyber-400 animate-pulse-slow" />
-                            <h2 className="text-sm font-semibold text-slate-200">Ask the AI</h2>
+                            <h2 className="text-sm font-semibold text-slate-200">{t('askAiLabel')}</h2>
                             <span className="ml-auto text-xs text-slate-600">Gemini · Redis cached</span>
                         </div>
 
@@ -287,7 +318,7 @@ export default function BriefingView() {
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                                     disabled={chatBusy}
-                                    placeholder="Ask about the briefing…"
+                                    placeholder={t('chatPlaceholder')}
                                     className="flex-1 bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5
                              text-sm text-slate-200 placeholder-slate-600
                              focus:outline-none focus:border-royal-500/50 transition-all duration-200
