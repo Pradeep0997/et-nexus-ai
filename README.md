@@ -10,6 +10,12 @@
 
 Business news in 2026 remains trapped in a static, one-size-fits-all format. Readers waste hours parsing through fragmented articles to understand the impact of macroeconomic events. ET Nexus abandons the traditional homepage, replacing it with hyper-personalized feeds, interactive AI-synthesized briefings, and dynamic visual story arcs. 
 
+# Architecture Diagram
+
+<img width="6175" height="4057" alt="AI Agent Orchestration-2026-03-28-184107" src="https://github.com/user-attachments/assets/c8beef92-159c-41f0-855c-60399a7cb956" />
+
+
+---
 ## ✨ Key Features
 
 * **My ET (Persona Engine):** The UI dynamically morphs based on user profiles. Investors see data-dense quantitative updates, founders see competitor moves, and students get explainer-first foundational context.
